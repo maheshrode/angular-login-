@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { EmailComponent } from './email/email.component';
-import { UsernameComponent } from './username/username.component';
+import { HomeComponent } from './register/home/home.component';
+import { EmailComponent } from './register/email/email.component';
+import { UsernameComponent } from './register/username/username.component';
 import { RegisterComponent } from './register/register.component';
 
 
