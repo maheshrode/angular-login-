@@ -1,20 +1,82 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>My First  Angulsr Project name mahesh: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">demo project</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container">
 
+  <div class="row">
+    <section>
+      <div class="wizard">
+        <h2 class="text-center">Registratoin Form</h2>
+        <div class="wizard-inner">
+          <div class="connecting-line"></div>
+          <ul class="nav nav-tabs" role="tablist">
+
+            <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}  ">
+              <a routerLink="/" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+                <span class="round-tab">
+                  <i class="glyphicon glyphicon-user"></i>
+                </span>
+              </a>
+            </li>
+
+            <li role="presentation" routerLinkActive="active">
+              <a routerLink="email" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+                <span class="round-tab">
+                  <i class="glyphicon glyphicon-pencil"></i>
+                </span>
+              </a>
+            </li>
+            <li role="presentation" routerLinkActive="active">
+              <a [routerLink]="['username']" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+                <span class="round-tab">
+                  <i class="glyphicon glyphicon-ok"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <form role="form">
+          <div class="tab-content">
+            <div class="tab-pane active px-5" role="tabpanel" id="step1">
+              <router-outlet></router-outlet>
+
+            </div>
+
+          </div>
+        </form>
+        <!-- <form role="form">
+                <div class="tab-content">
+                    <div class="tab-pane active" role="tabpanel" id="step1">
+                        <router-outlet></router-outlet>
+                        <h3>Home Component</h3>
+                      
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="step2">
+                        <h3>email Component</h3>
+                      
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+                            <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="step3">
+                        <h3>username Component</h3>
+                       
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+                            <li><button type="button" class="btn btn-default next-step">Skip</button></li>
+                            <li><button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="complete">
+                        <h3>Complete</h3>
+                        <p>You have successfully completed all steps.</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </form> -->
+      </div>
+    </section>
+  </div>
+</div>

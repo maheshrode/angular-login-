@@ -1,14 +1,47 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { EmailComponent } from './email/email.component';
+import { UsernameComponent } from './username/username.component';
+import { RegisterComponent } from './register/register.component';
+
+
+
+
+
+const appRoutes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'email',
+    component: EmailComponent
+  },
+  {
+    path: 'username',
+    component: UsernameComponent
+  }
+]
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    EmailComponent,
+    UsernameComponent,
+    RegisterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
+
   ],
   providers: [],
   bootstrap: [AppComponent]
